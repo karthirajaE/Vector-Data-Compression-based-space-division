@@ -7,5 +7,5 @@
 ----> by my own algorthem overall half of similer data will truncated
 
 ----> size will be half of the original
-#need to improve
+# need to improve
 ----> optimize my algorthem to improve better aprozimate ouput.
