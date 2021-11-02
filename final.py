@@ -4,23 +4,16 @@ import geopandas as gpd
 
 
 
-data = askopenfilename()
+data = askopenfilename() #select point.csv
 col_list = ["X", "Y", "st_nm"]
 csvfile = pd.read_csv(data, usecols=col_list)
 xpoint = csvfile["X"]
 ypoint = csvfile["Y"]
 plength = len(xpoint)
-print("grid file")
+print("select grid file")
 
 
-
-
-#xpoint = [97, 93, 93, 70, 70]
-#ypoint = [10, 35, 13, 35, 36]
-#plength = len(xpoint)
-
-
-grid = askopenfilename()
+grid = askopenfilename() #select grid.csv
 col_list1 = ["left", "right", "top", "bottom"]
 gridfile = pd.read_csv(grid, usecols=col_list1)
 left_point = gridfile["left"]
@@ -36,7 +29,6 @@ def Gridfilter(pointlength, gridlength, latitide, longitude, r, l, t, b):
     for i in range(0, int(pointlength)):
         lat = latitide[i]
         lon = longitude[i]
-        #print("hii")
         j = 0
         while j < int(gridlength) :
             left = l[j]
